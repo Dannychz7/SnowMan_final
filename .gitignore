@@ -1,0 +1,31 @@
+# --- C# / .NET build artifacts ---
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# --- Visual Studio / VS Code ---
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# --- macOS ---
+.DS_Store
+
+# --- Linux ---
+*~
+
+# --- Windows ---
+Thumbs.db
+desktop.ini
+
+# --- Logs and temp ---
+*.log
+*.tmp
+
+# --- Rider / JetBrains ---
+.idea/
+*.iml
+
