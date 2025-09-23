@@ -4,6 +4,7 @@ obj/
 out/
 Debug/
 Release/
+gameLogic/
 
 # --- Visual Studio / VS Code ---
 .vs/

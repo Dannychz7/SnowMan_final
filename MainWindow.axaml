@@ -5,7 +5,7 @@
         Width="300"
         Height="300"
         Background="Black">
-    <TextBlock Text="1"
+    <TextBlock Text="Hello World"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
                Foreground="White"
