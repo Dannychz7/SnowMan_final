@@ -53,12 +53,12 @@ namespace SnowMan_GUI
 
             if (game.IsGameWon())
             {
-                MessageText.Text += "\n🎉 You won!";
+                MessageText.Text += "\n You won!";
                 DisableInput();
             }
             else if (game.IsGameOver())
             {
-                MessageText.Text += $"\n💀 Game over! Word was: {game.CurrentWord}";
+                MessageText.Text += $"\n Game over! Word was: {game.CurrentWord}";
                 DisableInput();
             }
         }

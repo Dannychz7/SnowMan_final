@@ -14,7 +14,7 @@ namespace SnowMan_GUI
         public string CurrentWord = string.Empty;                               
         private string[] words = Array.Empty<string>();                         
 
-        // ✅ Track guessed letters
+        // Track guessed letters
         public List<char> GuessedLetters { get; private set; } = new List<char>();
 
         public SnowmanGame()
@@ -90,7 +90,7 @@ namespace SnowMan_GUI
             letter = char.ToLower(letter);
             if (!letters.ContainsKey(letter)) return "Invalid character.";
 
-            // ✅ Check if already guessed
+            // Check if already guessed
             if (GuessedLetters.Contains(letter))
                 return $"Already guessed '{letter}'.";
 
