@@ -17,7 +17,13 @@ Instead of drawing a gallows, each wrong guess slowly builds a snowman until the
 ---
 
 ## Screenshots
-*(Add screenshots of gameplay here once you have them)*
+<img width="250" height="475" alt="SnowMan1" src="https://github.com/user-attachments/assets/9eff3fca-558c-4e80-aadd-6083d04f871b" />
+<img width="250" height="475" alt="SnowMan2" src="https://github.com/user-attachments/assets/08853020-88ec-43b1-8e79-7f955ea20dd8" />
+<img width="250" height="475" alt="SnowMan3" src="https://github.com/user-attachments/assets/7df14fc1-4b81-452f-bdcd-8efeeef4ea4a" />
+<img width="250" height="475" alt="SnowMan4" src="https://github.com/user-attachments/assets/95ff55c7-24ca-45d1-a8af-8ece4457ab17" />
+<img width="250" height="475" alt="SnowMan5" src="https://github.com/user-attachments/assets/da7edc18-5df6-409f-83ce-e62817881ca1" />
+
+
 
 ---
 
