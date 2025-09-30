@@ -26,9 +26,9 @@ namespace SnowMan_GUI
             InputBox.Text = "";
             EnableInput();
             SnowmanCanvas.Children.Clear();
-            DrawSnowflakes();
             // DrawSnowman(game.WrongGuesses);
             DrawSnowman(game.WrongGuesses); // draw initial snowman (nothing at start)
+            DrawSnowflakes();
         }
 
         private void GuessButton_Click(object? sender, RoutedEventArgs e)
@@ -50,6 +50,7 @@ namespace SnowMan_GUI
             InputBox.Text = "";
 
             DrawSnowman(game.WrongGuesses); // update snowman after guess
+            DrawSnowflakes();
 
             if (game.IsGameWon())
             {
@@ -104,10 +105,10 @@ namespace SnowMan_GUI
                 {
                     Width = 5,
                     Height = 5,
-                    Fill = Brushes.White
+                    Fill = Brushes.White,
                 };
-                Canvas.SetLeft(snowflake, rnd.Next(0, (int)SnowmanCanvas.Width));
-                Canvas.SetTop(snowflake, rnd.Next(0, (int)SnowmanCanvas.Height));
+                Canvas.SetLeft(snowflake, rnd.Next(0, (int)SnowmanCanvas.Width - 15));
+                Canvas.SetTop(snowflake, rnd.Next(0, (int)SnowmanCanvas.Height - 15));
                 SnowmanCanvas.Children.Add(snowflake);
             }
         }
