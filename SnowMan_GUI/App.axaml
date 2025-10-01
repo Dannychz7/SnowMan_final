@@ -1,3 +1,10 @@
+<!-- File: SnowMan_GUI/App.xaml
+     Author: Daniel Chavez
+     Date: 2025.09.30
+     Description:
+      - Defines the Avalonia application XAML, this was made automatically.
+-->
+
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="SnowMan_GUI.App"
