@@ -1,0 +1,94 @@
+Discussion Log
+Assignment: Common Program (Snowman)
+Name: Daniel Chavez
+
+9/20 5 min Assignment Paper
+    - Here, I read the instructions and began outlining how Snowman works, parameters and constraints, and finally how I would do it with just CLI.
+    - Came up with something like this:
+
+        Some Directions on How to do Snowman:
+        1. Program randomly selects a word from the dictionary.txt file (separated by "\n")
+        2. Player basically plays hangman
+            - Player chooses any letter in the alphabet (case insensitive, so do something like UserInput.lower())
+            - NOTE: numbers and symbols should throw errors, or not be valid input
+            - NOTE: hyphens and apostrophes are legal guesses
+                - If right: All instances of that letter in the word are revealed
+                - If wrong: Guesses are shown alphanumerically (basically sorted) AND CANNOT be chosen again
+        3. Game ends when either:
+            1. All letters in the word have been guessed
+            2. Player has used 6 incorrect guesses (all parts of snowman have been drawn)
+            3. Show player has won or lost
+    
+9/20 30 min ChatGPT
+    - Here I asked ChatGPT to give me a quick crash course on C#, how to set up multi-platform support (Linux vs Mac vs Windows), and 
+      finally multi-platform GUI support.
+    - This is where GPT showed me how to install C# and have it work with VS Code, how to set up a .NET app, and any dependencies or libraries needed.
+    - This is where I created the initial git with a basic hello world program, nothing else.
+
+9/20 40 min Google.com (Most answers were given by the AI Google search engine)
+    - Asked/searched through Google a couple of questions about C#
+    - How to declare and initialize a dictionary in C#? 
+    - How to create a function in C#?
+    - What is error code: inaccessible due to protection level?
+
+9/20 5 min C# Corner (https://www.c-sharpcorner.com/UploadFile/mahesh/how-to-read-a-text-file-in-C-Sharp/)      
+    - To avoid having a very large array in memory, I decided to use the C# built-in functions of ReadLine over ReadAllLines
+    - While the algorithm may be a bit inefficient as I have to pass the file twice, it does save memory by not storing it in memory
+    - If dictionary.txt was GBs big it would slow down the computer, so the trade-off is speed vs performance
+    - Although, from what I've read about C#, the compiler is very quick and so is the code, so when comparing array vs live file access, I noticed
+      no performance differences.   
+
+End of 9/20 
+    - Result by end of day was that I had a successful working CLI game of Snowman with all requirements met
+
+9/23 10 min YouTube (https://www.youtube.com/watch?v=02gzBiIqS9o)
+    - I watched this video, called "Install Avalonia UI and Create Your First App On Windows | VS Code and Visual Studio | Setup" 
+    - After watching the video I was successfully able to create an empty Avalonia app
+
+9/23 20 min YouTube.com (https://www.youtube.com/watch?v=9vRV3knaffU)
+    - Watched this to understand the anatomy of an Avalonia app and how it is structured, what each file does, etc.
+    - End result was a simple app with a number 1, black screen, nothing else
+
+End of 9/23
+    - The end result of this day was that we had a barebones Avalonia app that was up and running and a CLI version of Snowman that was also ready to go
+
+9/25 20 min Avalonia Docs (https://docs.avaloniaui.net/docs/guides/graphics-and-animation/graphics-and-animations)
+    - Read this documentation to understand how to write and create shapes in Avalonia (like the circle, diagram)
+        - This helped in understanding how it is done in a .axaml file
+
+9/25 20 min Avalonia Docs (https://docs.avaloniaui.net/docs/basics/user-interface/controls/)
+    - These contained details on how the Controls library works, and the different properties inside
+    - In here I later used the TextBox, Button and other items to create the buttons, inputs, and text boxes
+
+9/25 10 min Avalonia Docs (https://api-docs.avaloniaui.net/docs/T_Avalonia_Controls_Shapes_Ellipse)
+    - Read a bit about what Ellipse is and how it works and how I can use it to create different shapes like circles inside the GUI
+
+9/25 15 min Avalonia Docs (https://docs.avaloniaui.net/docs/guides/custom-controls/draw-with-a-property)
+    - Read this documentation to understand how to create shapes using the Controls library
+
+9/25 1 hr Avalonia Docs (https://docs.avaloniaui.net/docs/get-started/test-drive/respond-to-an-event)
+    - I read this extensively to understand how events happen in an Avalonia app
+    - Up until this point, most of the app was static events drawn from the axaml file, and maybe a little from the .cs file, but events were not happening due to
+      not registering the clicks or enters
+
+End of 9/25
+    - The end result of 9/25 was that I was able to fully move the CLI logic of Snowman into a fully functioning game that you can interact with and play.
+      There was still a bit left to do for this app, like edge cases such as:
+        - If game over, stop input
+        - If new game, how to reinitialize all variables
+        - What if user throws invalid characters
+        - How to properly sort the letters
+
+9/27 15 min ChatGPT
+    - While I tried for a while to get this, I had to ask ChatGPT how I would be able to disable user input
+    - This is where it added a function called "private void DisableInput()"
+        - I did not know you could simply enable and disable input at will, so this helped where once a game ended a user could not enter any more input
+
+9/27 15 min ChatGPT (quality of life changes)
+    - This was not a requirement, but this feature was more of a quality of life improvement (I wanted to be able to press the guess box without actually having to 
+      click, and instead just press return)
+    - It basically added a box called "InputBox_KeyDown" in the .axaml file and then created a wrapper function called "InputBox_KeyDown()" where all it does
+      is check if the enter key was pressed and if so, call the "GuessButton_Click()" function
+
+End of 9/27
+    - By the end of 9/27 I had a fully running common project called Snowman where it covers all edge cases, all requirements, and any quality of life features
