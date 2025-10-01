@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SnowMan_GUI.WelcomeWindow"
+        Width="400" Height="600"
+        Title="Welcome to SnowMan"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        Background="DarkBlue">
+    
+    <Grid>
+        <!-- Snowflakes Background -->
+        <Canvas x:Name="SnowflakeCanvas" ClipToBounds="True"/>
+        
+        <!-- Main Content -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="30">
+            
+            <!-- Animated Title -->
+            <TextBlock x:Name="TitleText"
+                       Text="❄️ SNOWMAN HANGMAN ❄️" 
+                       FontSize="28" 
+                       FontWeight="Bold"
+                       Foreground="White"
+                       TextAlignment="Center"/>
+            
+            <!-- Start Button -->
+            <Button x:Name="StartButton"
+                    Content="START GAME" 
+                    Click="StartButton_Click"
+                    HorizontalAlignment="Center"
+                    Padding="25,15"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Background="LightBlue"
+                    Foreground="DarkBlue"
+                    CornerRadius="10"
+                    Opacity="1">
+                <Button.Styles>
+                    <Style Selector="Button:pointerover">
+                        <Setter Property="Background" Value="Gold"/>
+                        <Setter Property="RenderTransform" Value="scale(1.1)"/>
+                    </Style>
+                </Button.Styles>
+            </Button>
+            
+        </StackPanel>
+    </Grid>
+    
+
+    
+</Window>

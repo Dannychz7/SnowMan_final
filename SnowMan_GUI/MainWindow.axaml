@@ -2,7 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="SnowMan_GUI.MainWindow"
         Width="400" Height="600"
-        Title="SnowMan Hangman">
+        Title="SnowMan Hangman"
+        Background="DarkBlue">
   <StackPanel Margin="20">
     
     <TextBlock x:Name="WordText" FontSize="24" TextAlignment="Center" Margin="0,0,0,10"/>

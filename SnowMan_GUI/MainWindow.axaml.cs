@@ -9,7 +9,7 @@ namespace SnowMan_GUI
 {
     public partial class MainWindow : Window
     {
-        private SnowmanGame game;
+        private SnowmanGame game = null!;
 
         public MainWindow()
         {
@@ -105,6 +105,8 @@ namespace SnowMan_GUI
                     Width = 5,
                     Height = 5,
                     Fill = Brushes.White,
+                    Opacity = rnd.NextDouble() * 0.8 + 0.2
+
                 };
                 Canvas.SetLeft(snowflake, rnd.Next(0, (int)SnowmanCanvas.Width - 15));
                 Canvas.SetTop(snowflake, rnd.Next(0, (int)SnowmanCanvas.Height - 15));
