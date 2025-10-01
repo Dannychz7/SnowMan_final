@@ -1,3 +1,15 @@
+<!-- File: SnowMan_GUI/MainWindow.xaml
+Author: Daniel Chavez
+Date: 2025.09.30
+Description:
+     - Defines the graphical layout of the Snowman Hangman game using Avalonia XAML.
+     - Includes a StackPanel containing:
+        - TextBlocks for displaying the current word, messages, and guessed letters.
+        - A Canvas for rendering snowman parts (head, body, arms, hat) and snowflakes.
+        - Input controls: TextBox for letter input and Buttons for guessing and starting a new game.
+    - All snowman parts are initially hidden and shown incrementally based on wrong guesses.
+    - The XAML layout separates the GUI structure from the game logic implemented in MainWindow.cs. -->
+
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="SnowMan_GUI.MainWindow"

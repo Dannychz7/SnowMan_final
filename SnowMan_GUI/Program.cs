@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿// Entry point for the Avalonia Snowman GUI application, (created automatically).
+using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
 using System;

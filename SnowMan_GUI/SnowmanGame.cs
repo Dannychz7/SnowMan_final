@@ -1,3 +1,21 @@
+// File: SnowMan_GUI/SnowmanGame.cs
+// Author: Daniel Chavez
+// Date: 2025.09.30
+// Description:
+    // - SnowmanGame implements the core logic for a hangman type game, using a dictionary of letters (from the guessed word)
+    //   to track guesses and validate input efficiently.
+    
+    // - The game selects a random word from "dictionary.txt" using readLines() to minimize memory usage,
+    //   or falls back to a small built-in list if the file is missing.
+
+    // - Correct and incorrect guesses are tracked separately, with wrong guesses incrementing a counter
+    //   used to display the snowman stages.
+
+    // - Guessed letters are stored in a List<char> and displayed in sorted order for clarity.
+
+    // - Game state methods (IsGameWon, IsGameOver, GetDisplayWord) allow the GUI to reflect the current game state.
+
+    // - Overall, this class has all core game logic or the "brain" of the application, separate from the GUI code.
 using System;
 using System.Collections.Generic;
 using System.IO;
