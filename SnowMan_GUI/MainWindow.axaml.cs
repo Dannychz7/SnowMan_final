@@ -26,8 +26,7 @@ namespace SnowMan_GUI
             InputBox.Text = "";
             EnableInput();
             SnowmanCanvas.Children.Clear();
-            // DrawSnowman(game.WrongGuesses);
-            DrawSnowman(game.WrongGuesses); // draw initial snowman (nothing at start)
+            DrawSnowman(game.WrongGuesses); // draw initial snowman, nothing at start
             DrawSnowflakes();
         }
 

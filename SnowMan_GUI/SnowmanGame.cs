@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace SnowMan_GUI
 {
@@ -8,11 +9,10 @@ namespace SnowMan_GUI
     {
         public int wrongGuesses;
         private int maxGuesses = 6;
-        private Dictionary<char, bool> letters = new Dictionary<char, bool>();  
+        private Dictionary<char, bool> letters = new Dictionary<char, bool>();
         public int WrongGuesses => wrongGuesses;
 
-        public string CurrentWord = string.Empty;                               
-        private string[] words = Array.Empty<string>();                         
+        public string CurrentWord = string.Empty;
 
         // Track guessed letters
         public List<char> GuessedLetters { get; private set; } = new List<char>();
@@ -21,8 +21,7 @@ namespace SnowMan_GUI
         {
             wrongGuesses = 0;
             InitializeLetters();
-            LoadWords();
-            PickRandomWord();
+            LoadAndPickWord();
             GuessedLetters.Clear();
         }
 
@@ -45,6 +44,7 @@ namespace SnowMan_GUI
             foreach (char c in validChars)
                 letters[c] = true;
         }
+
         public string GetGuessedLetters()
         {
             var guessed = new List<char>();
@@ -59,19 +59,34 @@ namespace SnowMan_GUI
             return string.Join(" ", guessed);
         }
 
-
-        private void LoadWords()
+        private void LoadAndPickWord()
         {
             if (File.Exists("dictionary.txt"))
-                words = File.ReadAllLines("dictionary.txt");
+            {
+                CurrentWord = PickRandomWordFromFile("dictionary.txt");
+            }
             else
-                words = new string[] { "snowman", "winter", "holiday", "frost" }; // fallback
+            {
+                string[] fallback = { "raid", "zeus", "abacus", "logos" };
+                Random rand = new Random();
+                CurrentWord = fallback[rand.Next(fallback.Length)];
+            }
         }
 
-        private void PickRandomWord()
+        // This approach is slightly inefficient because the file is read twice, but .NET’s file streaming is efficient enough that the 
+        // performance hit is negligible compared to having to hold a large array in mem which is only ever used once.
+        private string PickRandomWordFromFile(string path)
         {
-            Random rand = new Random();
-            CurrentWord = words[rand.Next(words.Length)];
+            var rand = new Random();
+
+            // First pass: count total lines
+            int lineCount = File.ReadLines(path).Count();
+
+            // Pick random line number
+            int target = rand.Next(lineCount);
+
+            // Second pass: skip until the chosen line
+            return File.ReadLines(path).Skip(target).First();
         }
 
         public string GetDisplayWord()
@@ -100,7 +115,7 @@ namespace SnowMan_GUI
             // Mark guessed
             letters[letter] = false;
 
-            Console.WriteLine($"Current Word: {CurrentWord}");
+            // Console.WriteLine($"Current Word: {CurrentWord}"); DEBUG line, uncomment if you want to see the chosen word
             if (CurrentWord.ToLower().Contains(letter))
                 return $"Good guess! '{letter}' is in the word.";
             else
