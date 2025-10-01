@@ -1,14 +1,16 @@
 // File: SnowMan_GUI/MainWindow.axaml.cs
 // Author: Daniel Chavez
 // Date: 2025.09.30
+// Editor: Anthony Petrosino
+// Date: 2025.9.30
 // Description:
-    // - MainWindow implements the graphical interface for the Snowman game using Avalonia.
-    // - Initializes the game, draws the background, snowflakes, and snowman parts based on wrong guesses.
-    // - Handles user input via a text box, ONLY validates single letter guesses and updating the game state.
-    // - Updates the displayed word, guessed letters, and messages based on player actions.
-    // - Provides buttons for guessing, starting a new game, and enabling/disabling input when game is over / starting.
-    // - Uses drawing methods to visually build the snowman incrementally and add snowflake effects.
-    // - Connects to SnowmanGame class to connect the core logic in a fully interactive GUI.
+// - MainWindow implements the graphical interface for the Snowman game using Avalonia.
+// - Initializes the game, draws the background, snowflakes, and snowman parts based on wrong guesses.
+// - Handles user input via a text box, ONLY validates single letter guesses and updating the game state.
+// - Updates the displayed word, guessed letters, and messages based on player actions.
+// - Provides buttons for guessing, starting a new game, and enabling/disabling input when game is over / starting.
+// - Uses drawing methods to visually build the snowman incrementally and add snowflake effects.
+// - Connects to SnowmanGame class to connect the core logic in a fully interactive GUI.
 
 using Avalonia;
 using Avalonia.Controls;

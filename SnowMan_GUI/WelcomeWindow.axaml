@@ -1,3 +1,9 @@
+<!-- Author: Anthony Petrosino
+Date: 2025.9.30
+Description:
+    - WelcomeWindow implements a simple start screen for the Snowman game using Avalonia.
+ -->
+
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="SnowMan_GUI.WelcomeWindow"

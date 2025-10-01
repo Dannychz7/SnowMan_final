@@ -1,3 +1,8 @@
+// Author: Anthony Petrosino
+// Date: 2025.9.30
+// Description:
+    // - WelcomeWindow implements a simple start screen for the Snowman game using Avalonia.
+
 using Avalonia.Controls;
 using Avalonia.Controls.Shapes;
 using Avalonia.Interactivity;
