@@ -92,3 +92,24 @@ End of 9/25
 
 End of 9/27
     - By the end of 9/27 I had a fully running common project called Snowman where it covers all edge cases, all requirements, and any quality of life features
+
+<-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+Name: Anthony Petrosino
+Snowman collaboration log
+
+Start Window Implementation
+- I created WelcomeWindow.axaml and added a dark blue background, snowy background and styled start button. The button's click handler is in WelcomeWindow.axaml.cs 
+(lines 40-46), where StartButton_Click opens the MainWindow and closes the welcome screen. I also modified App.axaml.cs (line 23) to set WelcomeWindow as the initial 
+window instead of MainWindow, making it the app's entry point. I did not use AI for this part of the project, it was a good intro to C#.
+
+Random Snowflakes Implementation
+- I also implemented snowflake generation in WelcomeWindow.axaml.cs with the DrawSnowflakes method (lines 110-128) that creates 30 randomly positioned white 
+"ellipses"/circles with varying opacity on the SnowflakeCanvas. This method is called after each guess in GuessButton_Click and in NewGameButton_Click. This regenerates 
+the snowflakes on every user interaction (new game, guess, or restart), creating a fresh random pattern each time. I used AI to help me get an overview of the structure 
+of the project and with a small amount of C# functionality, however it was primarily written by me.
+
+<-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+Name: Jackson Wang
+Snowman collaboration log
+
+- Tested the program for bugs and edge cases, gathered screenshots for the GitHub page.

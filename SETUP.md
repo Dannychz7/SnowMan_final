@@ -79,7 +79,7 @@ Step 3 — Test the App Locally
 -------------------------------
 dotnet run
 
-✅ You should see a window with:
+You should see a window with:
 - Black background
 - White "1" centered on the screen
 
